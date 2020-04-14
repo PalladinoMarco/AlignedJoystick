@@ -276,16 +276,10 @@ uint16_t AlignedJoy::getCalibratedPoint(axis_t axis, point_t point)
 /**********************************************************************************************************
 READ JOYSTICK AXIS
 @description This method returns the required axis value. If calibrated, returns the aligned axis values.
-             If you want to get a mapping by keeping the scale of calibrated values do not use the arduino map 
-             function (already included in the method) but use the optional parameters "out_min" and "out_max".
-             For arduino map see https://www.arduino.cc/reference/en/language/functions/math/map/
-@param axis = X or Y label. OPTIONALLY it's possible to set a min and max output value to get a map in scale.
+@param axis = X or Y label.
 @return analog read of the relative axis, for example to read Y axis -> read(Y);
-        If you want to get the map values, for example to control a servo motor, do this:
-        read(X, 1000, 2000);
-        read(Y, 1000, 2000);
 **********************************************************************************************************/
-uint16_t AlignedJoy::read(axis_t axis, int32_t out_min, int32_t out_max)
+uint16_t AlignedJoy::read(axis_t axis)
 {
   uint16_t axisValue;
 
@@ -294,29 +288,40 @@ uint16_t AlignedJoy::read(axis_t axis, int32_t out_min, int32_t out_max)
       case X:
       if(joystickFullCalibrated)
       {
-        axisValue = map(analogRead(xPin), this->xAxisCalibMinimum, this->xAxisCalibMaximum, this->alignMin, this->alignMax);
+        axisValue = map(analogRead(this->xPin), this->xAxisCalibMinimum, this->xAxisCalibMaximum, this->alignMin, this->alignMax);
       }
       else
       {
-        axisValue = analogRead(xPin);
+        axisValue = analogRead(this->xPin);
       }
       break;
 
       case Y:
       if(joystickFullCalibrated)
       {
-        axisValue = map(analogRead(yPin), this->yAxisCalibMinimum, this->yAxisCalibMaximum, this->alignMin, this->alignMax);
+        axisValue = map(analogRead(this->yPin), this->yAxisCalibMinimum, this->yAxisCalibMaximum, this->alignMin, this->alignMax);
       }
       else
       {
-        axisValue = analogRead(yPin);
+        axisValue = analogRead(this->yPin);
       }
       break;
     }
-
-     if(joystickFullCalibrated && out_min != 0 && out_max != 0)
-      {
-        axisValue = map(axisValue, this->alignMin, this->alignMax, out_min, out_max);
-      }
    return axisValue;
+}
+
+/**********************************************************************************************************
+READ JOYSTICK AXIS (MAP)
+@description If you want to get a mapping by keeping the scale of calibrated values do not use the arduino map 
+             function (already included in the method) but use the optional parameters "out_min" and "out_max"
+			 of the read method.
+             For arduino map see https://www.arduino.cc/reference/en/language/functions/math/map/
+@param axis = X or Y label. "out_min" and "out_max" = min and max output value to get a map in scale.
+@return analog read of the relative axis in map mode, for example to control a servo motor, do this:
+        read(X, 1000, 2000);
+        read(Y, 1000, 2000);
+**********************************************************************************************************/
+uint16_t AlignedJoy::read(axis_t axis, int32_t out_min, int32_t out_max)
+{
+	return map(read(axis), this->alignMin, this->alignMax, out_min, out_max);
 }

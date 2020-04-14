@@ -72,7 +72,8 @@ class AlignedJoy
   bool           axesCalibration(uint16_t timeOfCal);
   void           setCalibratedPoint(axis_t axis, point_t point, uint16_t value);
   uint16_t       getCalibratedPoint(axis_t axis, point_t point);
-  uint16_t       read(axis_t axis, int32_t = 0, int32_t = 0);
+  uint16_t       read(axis_t axis);
+  uint16_t       read(axis_t axis, int32_t out_min, int32_t out_max);
   
   private:
   void     axesAlign();
