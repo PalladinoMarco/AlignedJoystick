@@ -1,0 +1,23 @@
+#######################################
+# Syntax Coloring Map alignedJoy
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+AlignedJoy              KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+middleCalibration       KEYWORD2
+axesCalibration	        KEYWORD2
+setCalibratedPoint      KEYWORD2
+getCalibratedPoint      KEYWORD2
+read	                KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+AXIS_TRAVEL             LITERAL1
