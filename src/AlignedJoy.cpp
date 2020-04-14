@@ -45,7 +45,7 @@ SOFTWARE.
 
 
 /**********************************************************************************************************
-PSP JOYSTICK
+ALIGNEDJOY constructor
 @description Create a new object of the joystick and set the axes (X/Y) pin to input mode
 @param xPin and yPin (analog port pin of the device)
 **********************************************************************************************************/
