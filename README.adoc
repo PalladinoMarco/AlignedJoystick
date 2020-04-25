@@ -3,7 +3,7 @@
 This library allows an Arduino board to read a variety of analog joystick by aligning axis values (XY).
 
 For more information about this library please visit us at
-https://github.com/PalladinoMarco/AlignedJoy
+https://github.com/PalladinoMarco/AlignedJoystick
 
 == License ==
 

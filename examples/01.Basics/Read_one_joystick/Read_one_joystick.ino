@@ -3,7 +3,7 @@
  * line the values of the joystick axes without calibration.
 */
 
-// INCLUDE LIBRARYs
+// INCLUDE LIBRARY
 #include <AlignedJoy.h>
 
 // PINs DEFINITION
@@ -11,7 +11,7 @@
 #define PIN_JOY1_X   0  //(up  down)
 #define PIN_JOY1_Y   1  //(left  right)
 
-// CLASS CONSTRUCTORs
+// CLASS CONSTRUCTOR
 // new joystick object
 AlignedJoy joystick_1(PIN_JOY1_X, PIN_JOY1_Y);
 

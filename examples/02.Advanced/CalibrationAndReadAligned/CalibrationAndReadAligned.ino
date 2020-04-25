@@ -3,7 +3,7 @@
  * print the calibrated values of the joystick.
 */
 
-// INCLUDE LIBRARYs
+// INCLUDE LIBRARY
 #include <AlignedJoy.h>
 
 // PINs DEFINITION
@@ -16,7 +16,7 @@
 #define TIME_CAL_1 2000
 #define TIME_CAL_2 3000
 
-// CLASS CONSTRUCTORs
+// CLASS CONSTRUCTOR
 // new joystick object
 AlignedJoy joystick_1(PIN_JOY1_X, PIN_JOY1_Y);
 

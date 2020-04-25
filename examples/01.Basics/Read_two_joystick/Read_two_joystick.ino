@@ -3,7 +3,7 @@
  * line the values of the joystick axes without calibration.
 */
 
-// INCLUDE LIBRARYs
+// INCLUDE LIBRARY
 #include <AlignedJoy.h>
 
 // PINs DEFINITION
