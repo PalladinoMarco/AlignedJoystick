@@ -1,6 +1,7 @@
 # AlignedJoy
 This library allows an Arduino board to read a variety of analog joystick by aligning axis values (XY).
 
+# Description
 Arduino offers a very simple way to read analog values (see [_analogRead()_](https://www.arduino.cc/reference/en/language/functions/analog-io/analogread/)).
 Interfacing a joystick with Arduino is a breeze, but then why use this library?
 
@@ -12,6 +13,17 @@ It is not always enough to make a map and a constrain because when x and y will 
 Aligend Joystick, as the name suggests, offers a reading of the axis values (x/y) of each joystick installed in an aligned way. With the axes having the same angle we will get reading values very close to each other. To get axis alignment you need to calibrate the joystick.
 
 Read the [_Wiki_](https://github.com/PalladinoMarco/AlignedJoystick/wiki) for more information.
+
+## License
+MIT License
+
+Copyright (c) 2020 Marco Palladino
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## Installation
 1. Download [the Master branch](https://github.com/PalladinoMarco/AlignedJoystick/archive/master.zip) from gitHub.
