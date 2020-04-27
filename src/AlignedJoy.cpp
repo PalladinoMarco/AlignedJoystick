@@ -48,6 +48,8 @@ AlignedJoy::AlignedJoy(uint8_t xPin, uint8_t yPin)
 {
   this->xPin = xPin;
   this->yPin = yPin;
+  this->joystickCentered = false;
+  this->joystickFullCalibrated = false;
   
   pinMode(this->xPin,INPUT);
   pinMode(this->yPin,INPUT);

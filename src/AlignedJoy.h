@@ -179,8 +179,8 @@ class AlignedJoy
   uint16_t yAxisCalibCenter;
   uint16_t yAxisCalibMinimum;
   uint16_t yAxisCalibMaximum;
-  bool     joystickCentered = false;
-  bool     joystickFullCalibrated = false;
+  bool     joystickCentered;
+  bool     joystickFullCalibrated;
 };
 
 // class from elapsed-Millis
