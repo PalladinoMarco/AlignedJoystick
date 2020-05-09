@@ -3,7 +3,7 @@
   @file AlignedJoy.h
   @brief Joystick calibrated class
   @author Marco Palladino <marck.palladino@gmail.com>
-  @version 1.0
+  @version 1.0.1
   @date 2020/03/28
   @see https://github.com/PalladinoMarco/AlignedJoystick
 
