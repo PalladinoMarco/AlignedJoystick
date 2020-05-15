@@ -1,6 +1,6 @@
 [![arduino-library-badge](https://www.ardu-badge.com/badge/AlignedJoy.svg?)](https://www.ardu-badge.com/AlignedJoy/ide)
 
-# AlignedJoy
+# Aligned Joystick
 This library allows an Arduino board to read a variety of analog joystick by aligning axis values (XY).
 
 # Description
